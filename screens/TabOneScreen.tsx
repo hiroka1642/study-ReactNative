@@ -3,6 +3,7 @@ import { useTailwind } from "tailwind-rn";
 import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
 import { RootTabScreenProps } from "../types";
+import tw from "tailwind-react-native-classnames";
 
 export default function TabOneScreen({
   navigation,
@@ -14,6 +15,9 @@ export default function TabOneScreen({
 
       {/* TaileindCSSを使う */}
       <Text style={tailwind("text-red-600")}>Tab One</Text>
+
+      {/* tailwind-react-native-classnamesを使う */}
+      <Text style={tw`bg-indigo-300`}>Tab One</Text>
 
       <View
         style={styles.separator}
